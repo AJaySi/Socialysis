@@ -1,0 +1,57 @@
+Pune Smart city Twitter sentiment Analysis
+
+Technology Stack:
+textblob : 
+twitter streaming APIs : 
+NLTK, NLP python modules
+
+Understanding Polarity and subjectivity: 
+
+Return a tuple of form (polarity, subjectivity ) where polarity is a float number within the range [-1.0, 1.0] 
+and subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective.
+
+Polarity: Polarity scorem also known as orientation polarity is the emotion expressed in the sentence. 
+It can be positive, negative or neutral. -0.5 score indicates strongly negative and 0.7 strongly positive number.
+
+Subjectivity: It measures the extent to which sentence, represents personal feelings, views, or beliefs compared 
+to objective truth or facts. Ex: 0.0 is very objective and 1.0 is very subjective.
+
+https://planspace.org/20150607-textblob_sentiment/
+
+    # TBD: Tags need to be more descriptive.
+    # POS tag list:
+    # CC  coordinating conjunction
+    # CD  cardinal digit
+    # DT  determiner
+    # EX  existential there (like: "there is" ... think of it like "there exists")
+    # FW  foreign word
+    # IN  preposition/subordinating conjunction
+    # JJ  adjective   'big'
+    # JJR adjective, comparative  'bigger'
+    # JJS adjective, superlative  'biggest'
+    # LS  list marker 1)
+    # MD  modal   could, will
+    # NN  noun, singular 'desk'
+    # NNS noun plural 'desks'
+    # NNP proper noun, singular   'Harrison'
+    # NNPS    proper noun, plural 'Americans'
+    # PDT predeterminer   'all the kids'
+    # POS possessive ending   parent\'s
+    # PRP personal pronoun    I, he, she
+    # PRP$    possessive pronoun  my, his, hers
+    # RB  adverb  very, silently,
+    # RBR adverb, comparative better
+    # RBS adverb, superlative best
+    # RP  particle    give up
+    # TO  to  go 'to' the store.
+    # UH  interjection    errrrrrrrm
+    # VB  verb, base form take
+    # VBD verb, past tense    took
+    # VBG verb, gerund/present participle taking
+    # VBN verb, past participle   taken
+    # VBP verb, sing. present, non-3d take
+    # VBZ verb, 3rd person sing. present  takes
+    # WDT wh-determiner   which
+    # WP  wh-pronoun  who, what
+    # WP$ possessive wh-pronoun   whose
+    # WRB wh-abverb   where, when
