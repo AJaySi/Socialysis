@@ -44,6 +44,7 @@ def get_config(conf_type):
     
 def get_twt_api():
     # Get the keys.
+    #from tweelysis_conf import consumer_key, consumer_secret, access_token, access_token_secret
     consumer_key, consumer_key_secret, access_token, access_token_secret = get_config('tapi')
 
     # Create our tweepy API instance by passing auth instance into the API function of tweepy.

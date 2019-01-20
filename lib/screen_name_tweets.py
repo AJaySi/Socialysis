@@ -11,7 +11,7 @@ import argparse
 import sys, os
 from lib.main_dumb_lib import get_twt_api, clean_tweets, get_sentiment, get_config
 from lib.tweets_analyzer import main
-from visualization import wrdcloud
+from lib.visualization import wrdcloud
 
 # Common function to ̥̥̥̥get/fetch tweets for a given twitter screen name.
 def get_screen_tweets(scrn_name):

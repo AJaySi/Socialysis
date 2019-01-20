@@ -54,14 +54,23 @@ def parse_arguments():
         1. Run As:  %(prog)s -sm\n\
         2. TBD: Run As: %(prog)s -sm give_any_smart_city_name\n"
     )
-    # For analysis tweets using screen_name=NarendraModi.
+    # This option takes a valid twitter screen names and fetches tweets for a specified range.
     parser.add_argument(
-        "-md",
-        action='store_true',
-        required=False,
-        help="Does an analysis of tweets from the twitter screen name 'NarendraModi'.\n\
-        Use this command as : %(prog)s -md\n"
+        "-sn",
+        metavar='',
+        # Do an analysis of all news channel twitter handle. Default: India.
+        default='NarendraModi',
+        help="TBD: Do an analysis of all tweets for given twitter screen name.\n\
+        Use this option as: %(prog)s -sn give_twitter_screen_name\n\
+        Example: %(prog)s -sn NarendraModi\n"
     )
+    # 
+    parser.add_argument(
+        "-ht",
+        help="TBD: Analyse tweets of specified hasttags.\n\
+        Use this option as: %(prog)s -ht #dontknow"
+    )
+    # Can we generate a summary of all the news around a screename, twitter topic.
     parser.add_argument(
         "-news",
         metavar='',
@@ -70,6 +79,9 @@ def parse_arguments():
         help="TBD: Do an analysis of all tweets from Indian newspaper twitter handles.\n\
         Use this option as: %(prog)s -news"
     )
+    # Analyze tweets from indian political parties. Elections2019/Winter is coming.
+    # One should be able to specify a single party twitter account to analyze and
+    # also political figures/screen_name.
     parser.add_argument(
         "-p",
         metavar='',
@@ -78,23 +90,11 @@ def parse_arguments():
         help="TBD: Do an analysis of all tweets from Indian political parties twitter handles.\n\
         Use this option as: %(prog)s -p"
     )
-    parser.add_argument(
-        "-sn",
-        metavar='',
-        # Do an analysis of all news channel twitter handle. Default: India.
-        default='NarendraModi',
-        help="TBD: Do an analysis of all tweets for given twitter screen name.\n\
-        Use this option as: %(prog)s -news"
-    )
+    # Option to list/analyse most trending tweets. The problem is defining 'trending'.
     parser.add_argument(
         "-t",
         help="TBD: Analyse most trending. Use 'tweelysis.conf' file to define trending.\n\
         Use this option as: %(prog)s -t"
-    )
-    parser.add_argument(
-        "-ht",
-        help="TBD: Analyse tweets of specified hasttags.\n\
-        Use this option as: %(prog)s -ht #dontknow"
     )
 
     # If nothing is given, then you need help.

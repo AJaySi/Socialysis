@@ -2,20 +2,8 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2017 @x0rz
 #
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, version 3 of the License.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
 # Usage:
 # python tweets_analyzer.py -n screen_name
-#
-# Install:
-# pip install tweepy ascii_graph tqdm numpy
 
 from __future__ import unicode_literals
 
@@ -40,8 +28,6 @@ try:
 except ImportError:
     from urlparse import urlparse
 
-from tweelysis_conf import consumer_key, consumer_secret, access_token, access_token_secret
-
 # Here are sglobals used to store data - I know it's dirty, whatever
 start_date = 0
 end_date = 0
@@ -52,42 +38,42 @@ color_supported = True
 ansi_escape = re.compile(r'\x1B\[[0-?]*[ -/]*[@-~]')
 
 
-parser = argparse.ArgumentParser(description=
-    "Simple Twitter Profile Analyzer (https://github.com/x0rz/tweets_analyzer) version %s" % __version__,
-                                 usage='%(prog)s -n <screen_name> [options]')
-parser.add_argument('-l', '--limit', metavar='N', type=int, default=1000,
-                    help='limit the number of tweets to retreive (default=1000)')
-parser.add_argument('-n', '--name', required=True, metavar="screen_name",
-                    help='target screen_name')
-
-parser.add_argument('-f', '--filter', help='filter by source (ex. -f android will get android tweets only)')
-
-parser.add_argument('--no-timezone', action='store_true',
-                    help='removes the timezone auto-adjustment (default is UTC)')
-
-parser.add_argument('--utc-offset', type=int,
-                    help='manually apply a timezone offset (in seconds)')
-
-parser.add_argument('--friends', action='store_true',
-                    help='will perform quick friends analysis based on lang and timezone (rate limit = 15 requests)')
-
-parser.add_argument('-e', '--export', metavar='path/to/file', type=str,
-                    help='exports results to file')
-
-parser.add_argument('-j', '--json', action='store_true',
-                    help='outputs json')
-
-parser.add_argument('-s', '--save', action='store_true',
-                    help='saves tweets to %s/{twitter_handle}/{yyyy-mm-dd_HH-MM-SS}.json' %save_folder)
-
-parser.add_argument('--no-color', action='store_true',
-                    help='disables colored output')
-
-parser.add_argument('--no-retweets', action='store_true',
-                    help='does not evaluate retweets')
-
-
-args = parser.parse_args()
+#parser = argparse.ArgumentParser(description=
+#    "Simple Twitter Profile Analyzer (https://github.com/x0rz/tweets_analyzer) version %s" % __version__,
+#                                 usage='%(prog)s -n <screen_name> [options]')
+#parser.add_argument('-l', '--limit', metavar='N', type=int, default=1000,
+#                    help='limit the number of tweets to retreive (default=1000)')
+#parser.add_argument('-n', '--name', required=True, metavar="screen_name",
+#                    help='target screen_name')
+#
+#parser.add_argument('-f', '--filter', help='filter by source (ex. -f android will get android tweets only)')
+#
+#parser.add_argument('--no-timezone', action='store_true',
+#                    help='removes the timezone auto-adjustment (default is UTC)')
+#
+#parser.add_argument('--utc-offset', type=int,
+#                    help='manually apply a timezone offset (in seconds)')
+#
+#parser.add_argument('--friends', action='store_true',
+#                    help='will perform quick friends analysis based on lang and timezone (rate limit = 15 requests)')
+#
+#parser.add_argument('-e', '--export', metavar='path/to/file', type=str,
+#                    help='exports results to file')
+#
+#parser.add_argument('-j', '--json', action='store_true',
+#                    help='outputs json')
+#
+#parser.add_argument('-s', '--save', action='store_true',
+#                    help='saves tweets to %s/{twitter_handle}/{yyyy-mm-dd_HH-MM-SS}.json' %save_folder)
+#
+#parser.add_argument('--no-color', action='store_true',
+#                    help='disables colored output')
+#
+#parser.add_argument('--no-retweets', action='store_true',
+#                    help='does not evaluate retweets')
+#
+#
+#args = parser.parse_args()
 
 
 activity_hourly = {

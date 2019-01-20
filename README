@@ -1,3 +1,27 @@
+#---------------------------------------
+# Getting Started Info:
+#---------------------------------------
+Read How_To_Get_Twitter_APIs file in this directory.
+
+
+For the Name field, simply write a name for your application. It can be “MyApp” or anything. 
+In the Description field, you can write something about your application so that you can be reminded later of what it does. Lastly, for the Website field, you can enter your own website, 
+but if you don’t have any, https://www.site.com will suffice.
+
+Note that we are not writing anything down in the Callback URL field. Leave that blank for now. Once you’re done, tick the agreement checkbox and click “Create your Twitter Application”
+
+Once your application has already been created, a dashboard will appear in your browser. Go to “Keys and Access Tokens” tab and generate your consumer keys and access tokens if they’re not yet available. By the end of this process, we now have the following keys, and we’ll refer to them as the following:
+
+Consumer Key (API Key), consumer_key
+Consumer Secret (API Secret), consumer_secret
+Access Token, access_token
+Access Token Secret, access_token_secret
+Take note of these variables for we’ll use them later on.
+
+
+#---------------------------------------
+# Feature List.
+#---------------------------------------
 Pune Smart city Twitter sentiment Analysis
 
 Technology Stack:

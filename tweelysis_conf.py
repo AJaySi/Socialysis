@@ -9,10 +9,10 @@
 ##########################################
 
 # Please read README file in this directory on how to get below values.
-consumer_key = mmUbrLagsNY38lds7PYEEPmrw
-consumer_key_secret = N9eB7ZJQG8TKSWGRi3FDrBBmxBkWNWxbsuNU4svMvTv9SszhGM
-access_token = 1082166100098375682-W4ka2RrEzEEbAVM3XqTi3pa0dUaoUO
-access_token_secret = Fn22DbJaDBHxc0D9QEdRPJGmFH23ZjJiZOb44E1Rcg3QH
+consumer_key = 'mmUbrLagsNY38lds7PYEEPmrw'
+consumer_key_secret = 'N9eB7ZJQG8TKSWGRi3FDrBBmxBkWNWxbsuNU4svMvTv9SszhGM'
+access_token = '1082166100098375682-W4ka2RrEzEEbAVM3XqTi3pa0dUaoUO'
+access_token_secret = 'Fn22DbJaDBHxc0D9QEdRPJGmFH23ZjJiZOb44E1Rcg3QH'
 
 # Mention the number of tweets to fetch for a screen name, #tags, search queries.
 num_of_tweets = 200
