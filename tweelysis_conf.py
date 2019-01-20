@@ -1,3 +1,4 @@
+#!/usr/bin/python
 ###########################################
 #
 # Below paramter = value is exposed to get more control on the tool.
@@ -28,7 +29,7 @@ most_retweets = True
 
 # TBD : Need to give controlling parameters for smart city. for -sm option.
 # You can change the right side as permitted on twitter.
-smartcity_search_keywords = pune smart city
+smartcity_search_keywords = 'pune smart city'
 
 # TBD: need to mention the news channel twitter handles and hashtags. for -news option.
 

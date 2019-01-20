@@ -9,3 +9,4 @@ lib/__pycache__/screen_name_tweets.cpython-37.pyc
 datasets/training_sentiments.txt
 datasets/polarity_list.csv
 datasets/subjectivity_list.csv
+__pycache__

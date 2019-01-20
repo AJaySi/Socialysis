@@ -40,7 +40,7 @@ try:
 except ImportError:
     from urlparse import urlparse
 
-from secrets import consumer_key, consumer_secret, access_token, access_token_secret
+from tweelysis_conf import consumer_key, consumer_secret, access_token, access_token_secret
 
 # Here are sglobals used to store data - I know it's dirty, whatever
 start_date = 0

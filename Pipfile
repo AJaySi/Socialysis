@@ -29,6 +29,7 @@ HTMLParser = "*"
 Pillow = "*"
 PySocks = "==1.6.8"
 ascii_graph = "==1.5.1"
+twitterscarper = "*"
 
 [requires]
 python_version = "3.7"
